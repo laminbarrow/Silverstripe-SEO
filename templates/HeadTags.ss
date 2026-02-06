@@ -3,7 +3,9 @@
     <title>$PageMetaTitle</title>
     <meta name="description" content="$PageMetaDescription">
 
-    <link rel="canonical" href="$PageCanonical">
+    <% if $PageCanonical %>
+        <link rel="canonical" href="$PageCanonical">
+    <% end_if %>
     <meta name="robots" content="$PageRobots">
 
     <% if not $HideSocial %>
@@ -22,6 +24,7 @@
             <meta name="twitter:image" content="$PageSocialImage.AbsoluteURL">
         <% else_if $DefaultPageSocialImage %>
             <meta property="og:image" content="$DefaultPageSocialImage.AbsoluteURL">
+            <meta name="twitter:image" content="$DefaultPageSocialImage.AbsoluteURL">
         <% end_if %>
 
         <% if $SiteFacebookAppID %>

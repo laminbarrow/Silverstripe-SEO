@@ -38,8 +38,8 @@ class SeoHeadTag extends DataObject
      **/
     private static $db = [
         'Title' => 'Varchar(512)',
-        'Value' => 'Varchar(512)',
-        'Type'  => 'Varchar(512)'
+        'Value' => 'Text',
+        'Type'  => 'Text'
     ];
 
     /**
